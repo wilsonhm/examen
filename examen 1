@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author TEODORO
+ */
+public class BusquedabinariaWA {
+    public static int busquedaBinaria(int arr[], int v, int i, int j)
+{
+int k = (i+j)/2;
+
+if( i>j )
+{
+return -i;
+}
+if( arr[k]==v )
+{
+return k;
+}
+else
+{
+if( arr[k]<v )
+{
+i=k+1;
+}
+else
+{
+j=k-1;
+}
+
+return busquedaBinaria(arr, v, i, j);
+}
+}
+}
